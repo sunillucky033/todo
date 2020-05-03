@@ -1,0 +1,21 @@
+{%extends 'app/index.html'%}
+{%block content%}
+
+<div class="row-6">
+    <div class="col-6">
+        <h1>Add Items</h1>
+        <form method="POST" action="{%url 'add'%}">
+            {%csrf_token%}
+            <input type="text" class="form-control mb-2 mr-sm-2" name="data" placeholder="type here ...">
+            <button type="submit" class="btn btn-primary mb-2">Add</button>
+        </form>
+    
+        <div class="card"  style="width: 6rem;">
+            <a href="{% url 'show'%}" class="btn btn-primary stretched-link" >Home</a>
+        </div>
+    </div>
+
+</div>
+
+
+{%endblock%}
